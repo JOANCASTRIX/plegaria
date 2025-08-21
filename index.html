@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLEGARIA Bar</title>
+  <link rel="icon" href="C:\Users\JoanE\Downloads\istockphoto-1441373171-612x612.jpg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', cursive;
+      background: url('https://www.transparenttextures.com/patterns/dark-wood.png');
+      color: #fdf6e3;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* ---- HEADER ---- */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                  url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 3px solid #aa8453;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      letter-spacing: 8px;
+      color: #ffcc70;
+      margin: 0;
+    }
+
+    header p {
+      font-style: italic;
+      color: #dfc48c;
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      background: #2d1b12;
+      padding: 12px;
+      border-bottom: 2px solid #aa8453;
+      z-index: 1000;
+    }
+
+    nav a {
+      background: #3b2a1e;
+      color: #fdf6e3;
+      border: 1px solid #aa8453;
+      padding: 10px 16px;
+      margin: 4px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #aa8453;
+      color: #1c120a;
+    }
+
+    /* ---- SECCIONES ---- */
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(0,0,0,0.75);
+      padding: 30px;
+      border-left: 5px solid #aa8453;
+      border-right: 5px solid #aa8453;
+      border-radius: 12px;
+      animation: slideIn 0.6s ease-in-out;
+    }
+
+    h2 {
+      color: #ffcc70;
+      font-size: 2em;
+      border-bottom: 2px solid #aa8453;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    /* ---- GALERÍA ---- */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #aa8453;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ---- FORMULARIO ---- */
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #aa8453;
+      font-family: inherit;
+    }
+
+    form button {
+      background: #aa8453;
+      color: #1c120a;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #ffcc70;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      background: #2d1b12;
+      padding: 25px;
+      color: #dfc48c;
+      font-size: 0.9em;
+      border-top: 2px solid #aa8453;
+      margin-top: 40px;
+    }
+
+    /* ---- WHATSAPP FLOAT ---- */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+      text-decoration: none;
+      z-index: 2000;
+    }
+
+    /* ---- ANIMACIONES ---- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PLEGARIA</h1>
+    <p>Vivimos en una</p>
+  </header>
+
+  <nav>
+    <a href="#merch">Merch</a>
+    <a href="#productos">Bar</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#pago">Pagos</a>
+  </nav>
+
+  <section id="merch">
+    <h2>Merch Oficial</h2>
+    <ul>
+      <li>Camiseta "Plegaria" - $40.000</li>
+      <li>Gorra Vintage - $30.000</li>
+      <li>Sticker Pack - $10.000</li>
+      <li>Vaso Rockero - $25.000</li>
+    </ul>
+  </section>
+
+  <section id="productos">
+    <h2>Bar & Bebidas</h2>
+    <ul>
+      <li>Cerveza artesanal - $8.000</li>
+      <li>Trago "Punk Shot" - $12.000</li>
+      <li>Combo whisky + gaseosa - $35.000</li>
+      <li>Nachos con guacamole - $18.000</li>
+    </ul>
+  </section>
+
+  <section id="eventos">
+    <h2>Próximos Eventos</h2>
+    <ul>
+      <li>🎸 16 Ago - Noche de Covers The Strokes</li>
+      <li>🔥 23 Ago - Jam Session + Cervezatón</li>
+      <li>🎤 31 Ago - Karaoke Rock Indie</li>
+    </ul>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1583337130417-f73b01cdfbbf?auto=format&fit=crop&w=600&q=80" alt="Concierto">
+      <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=600&q=80" alt="Bar">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Bebida">
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Mosquera, Cundinamarca</p>
+    <p>📞 +57 322 312 4567</p>
+    <p>📧 plegariabar@gmail.com</p>
+    <p>Síguenos en Instagram: <strong>@plegariabar</strong></p>
+
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="pago">
+    <h2>Métodos de Pago</h2>
+    <ul>
+      <li>Nequi / Daviplata</li>
+      <li>Transferencia Bancaria</li>
+      <li>Tarjeta débito / crédito en sitio</li>
+      <li>Efectivo</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 PLEGARIA Bar - Todos los derechos reservados.
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/573223124567" class="whatsapp">💬</a>
+
+</body>
+</html>

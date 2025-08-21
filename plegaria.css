@@ -1,0 +1,218 @@
+/* === RESET GENERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'UnifrakturCook', cursive;
+  background: url('https://www.transparenttextures.com/patterns/dark-wood.png');
+  color: #fdf6e3;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+              url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 80px 20px;
+  border-bottom: 3px solid #aa8453;
+  animation: fadeIn 1.5s ease-out;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 8px;
+  color: #ffcc70;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-style: italic;
+  color: #dfc48c;
+  font-size: 1.2rem;
+}
+
+/* === NAVBAR === */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background: #2d1b12;
+  padding: 12px;
+  border-bottom: 2px solid #aa8453;
+  z-index: 1000;
+}
+
+nav a {
+  background: #3b2a1e;
+  color: #fdf6e3;
+  border: 1px solid #aa8453;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #aa8453;
+  color: #1c120a;
+}
+
+/* === SECCIONES === */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: rgba(0,0,0,0.75);
+  padding: 30px;
+  border-left: 5px solid #aa8453;
+  border-right: 5px solid #aa8453;
+  border-radius: 12px;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+h2 {
+  color: #ffcc70;
+  font-size: 2em;
+  border-bottom: 2px solid #aa8453;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* === GALERÍA === */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #aa8453;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* === FORMULARIO DE CONTACTO === */
+form {
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #aa8453;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #1c120a;
+  color: #fdf6e3;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #dfc48c;
+}
+
+form button {
+  background: #aa8453;
+  color: #1c120a;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #ffcc70;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  background: #2d1b12;
+  padding: 25px;
+  color: #dfc48c;
+  font-size: 0.9em;
+  border-top: 2px solid #aa8453;
+  margin-top: 40px;
+}
+
+/* === BOTÓN WHATSAPP FLOTANTE === */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  text-decoration: none;
+  z-index: 2000;
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
+  }
+}
